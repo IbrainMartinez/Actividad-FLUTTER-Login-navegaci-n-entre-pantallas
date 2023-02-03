@@ -104,11 +104,25 @@ class app extends StatelessWidget {
             children: [
               const DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.white,
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        "https://pixabay.com/get/gae366ce03dd59e4af6fefc832d9655a3e438eb49b51e547bbd3c55ef44e19c92ee4660e7daa8b89e6c10db588defe3f8a054957326d2a75431f6db41b77e56321a3a44e33f8e5c148f478cef971e5c58_1920.jpg"),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-                child: Text('Drawer Header'),
+                child: UserAccountsDrawerHeader(
+                  accountName: Text("Ibrain Martinez"),
+                  accountEmail: Text("ibrain120701@gmail.com"),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        "https://pixabay.com/get/g93f0508dbb6b1e4546f841fa0e935dc57638072d33cf3c231d811ec919ac30a65be6c6340c69cd3a1f7444c0a53eb8683e4827eff028d5f2ca5231795863aab2a6767550238774d43b1a748dd55ecb26_1920.jpg"),
+                  ),
+                ),
               ),
+              const SizedBox(height: 16.0),
               ListTile(
+                leading: const Icon(Icons.home),
                 title: const Text('Home'),
                 onTap: () {
                   Navigator.push(
@@ -118,6 +132,7 @@ class app extends StatelessWidget {
                 },
               ),
               ListTile(
+                leading: const Icon(Icons.emoji_objects),
                 title: const Text('Productos'),
                 onTap: () {
                   Navigator.push(
@@ -127,6 +142,7 @@ class app extends StatelessWidget {
                 },
               ),
               ListTile(
+                leading: const Icon(Icons.home_repair_service_sharp),
                 title: const Text('Servicios'),
                 onTap: () {
                   Navigator.push(
