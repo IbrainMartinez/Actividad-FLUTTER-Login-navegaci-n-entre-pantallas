@@ -10,9 +10,9 @@ class screen1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       title: 'Material App',
+      debugShowCheckedModeBanner: false,
       home: const app(
         title: '',
       ),
@@ -83,7 +83,7 @@ class app extends StatelessWidget {
       ),
     );
     return MaterialApp(
-      
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: Text(title)),
         body: ListView(

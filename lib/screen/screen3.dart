@@ -14,6 +14,7 @@ class screen3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: appTitle,
+      debugShowCheckedModeBanner: false,
       home: const MyHomePage(title: appTitle),
     );
   }

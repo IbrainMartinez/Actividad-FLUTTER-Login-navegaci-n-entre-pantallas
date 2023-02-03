@@ -19,6 +19,7 @@ class _screen2State extends State<screen2> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: screen2.appTitle,
+      debugShowCheckedModeBanner: false,
       home: MyHomePage(title: screen2.appTitle),
     );
   }
